@@ -10,7 +10,6 @@
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #0b0f19;
-            /* Nền đa sắc mờ ảo phía sau */
             background-image: 
                 radial-gradient(circle at 0% 0%, rgba(244, 63, 94, 0.15), transparent 40%),
                 radial-gradient(circle at 100% 0%, rgba(56, 189, 248, 0.15), transparent 40%),
@@ -18,14 +17,13 @@
                 radial-gradient(circle at 0% 100%, rgba(139, 92, 246, 0.15), transparent 40%);
             background-attachment: fixed;
             color: #f8fafc;
-            padding-bottom: 100px; /* Chừa chỗ cho thanh menu dưới đáy */
+            padding-bottom: 100px;
         }
         
         h1, h2, h3, h4, .font-outfit {
             font-family: 'Outfit', sans-serif;
         }
 
-        /* Khối Bento Card */
         .bento-card {
             background: rgba(30, 41, 59, 0.5);
             backdrop-filter: blur(20px);
@@ -39,7 +37,6 @@
             box-shadow: 0 20px 40px -15px rgba(0,0,0,0.5);
         }
 
-        /* Thanh menu Bottom Dock */
         .bottom-dock {
             background: rgba(15, 23, 42, 0.75);
             backdrop-filter: blur(24px);
@@ -68,7 +65,6 @@
             box-shadow: 0 0 10px #38bdf8;
         }
 
-        /* In PDF */
         @media print {
             body { background: white; color: black; padding-bottom: 0; }
             .content-section { display: block !important; opacity: 1 !important; visibility: visible !important; margin-bottom: 2rem;}
@@ -93,14 +89,13 @@
     </nav>
 
     <div id="tab-gioi-thieu" class="content-section pt-12 px-4 max-w-6xl mx-auto animate-[fadeIn_0.5s_ease-out]">
-        
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             
             <div class="bento-card md:col-span-2 p-8 md:p-10 relative bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden group">
                 <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-pink-500 to-rose-500 opacity-20 rounded-full blur-3xl group-hover:opacity-30 transition-opacity"></div>
                 <div class="relative z-10">
                     <span class="inline-block py-1 px-3 rounded-full bg-rose-500/20 text-rose-300 text-xs font-bold tracking-widest uppercase mb-4 border border-rose-500/30">Digital Portfolio QH-2025</span>
-                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-2 leading-tight">
+                    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-white mb-2 leading-normal">
                         Phan Nhật <br>
                         <span class="bg-gradient-to-r from-rose-400 via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent">Quân</span>
                     </h1>
@@ -112,7 +107,7 @@
 
             <div class="bento-card p-6 flex flex-col items-center justify-center bg-gradient-to-b from-indigo-500/20 to-purple-500/10">
                 <div class="w-48 h-48 rounded-full p-2 bg-gradient-to-tr from-cyan-400 via-indigo-500 to-pink-500 animate-[spin_10s_linear_infinite] shadow-xl shadow-indigo-500/20 mb-4">
-                    <img src="avatar.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Nhat+Quan&background=0b0f19&color=fff&size=512'" alt="Avatar" class="w-full h-full object-cover rounded-full border-4 border-[#0b0f19] animate-[spin_10s_linear_infinite_reverse]">
+                    <img src="avatar.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Phan+Nhat+Quan&background=0b0f19&color=fff&size=512'" alt="Avatar" class="w-full h-full object-cover rounded-full border-4 border-[#0b0f19] animate-[spin_10s_linear_infinite_reverse]">
                 </div>
                 <h3 class="font-bold text-xl text-white">IT System Engineer</h3>
             </div>
@@ -203,7 +198,7 @@
                     <span class="text-2xl">🤖</span>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">Kỹ nghệ Prompt</h3>
-                <p class="text-sm text-slate-400 mb-6 flex-grow">Nghiên cứu cách tối ưu không gian lệnh (Prompt Engineering) để điều hướng các LLM. So sánh hiệu năng trả lời giữa lệnh cơ bản và hệ thống lệnh chi tiết.</p>
+                <p class="text-sm text-slate-400 mb-6 flex-grow">Nghiên cứu cách tối ưu không gian lệnh (Prompt Engineering) để điều hướng các LLM. So sánh hiệu năng trả lời giữa lệnh cơ bản và lệnh đã được tinh chỉnh (Few-shot).</p>
                 <div class="rounded-xl overflow-hidden mb-6 aspect-video bg-slate-900 border border-slate-700">
                     <img src="bai3.png" alt="Prompt Engineering" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 </div>
@@ -255,41 +250,63 @@
     <section id="tab-tong-ket" class="content-section hidden pt-12 px-4 max-w-4xl mx-auto">
         <div class="bento-card rounded-[2rem] p-8 md:p-12 text-center space-y-10 relative bg-gradient-to-br from-indigo-900/40 to-fuchsia-900/20">
             
-            <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tight relative z-10">Kết quả <span class="bg-gradient-to-r from-teal-400 to-emerald-500 bg-clip-text text-transparent">Đầu ra</span></h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tight relative z-10">Kết quả <span class="bg-gradient-to-r from-teal-400 to-emerald-500 bg-clip-text text-transparent">Đầu ra Hệ thống</span></h2>
             
             <div class="grid gap-6 text-left relative z-10 mt-8">
-                <div class="bg-slate-900/80 p-6 rounded-2xl border-l-4 border-teal-400">
-                    <h4 class="text-teal-400 font-bold mb-2 text-xl">1. Kỷ luật & Hệ thống</h4>
-                    <p class="text-slate-300 font-light leading-relaxed">Việc hoàn thiện chuỗi dự án ép bản thân chuyển từ thói quen quản lý dữ liệu tùy tiện sang phong cách của một kỹ sư: Phân cấp rõ ràng, đặt tên khoa học và kiểm soát phiên bản chặt chẽ.</p>
+                <div class="bg-slate-900/80 p-6 rounded-2xl border-l-4 border-teal-400 shadow-xl">
+                    <h4 class="text-teal-400 font-bold mb-2 text-xl flex items-center gap-2">
+                        <span>📊</span> 1. Tư duy máy tính & Quản trị vòng đời dữ liệu (Data Lifecycle Management)
+                    </h4>
+                    <p class="text-slate-300 font-light leading-relaxed text-sm md:text-base">
+                        Học phần đã tạo ra bước chuyển dịch căn bản trong hệ hình tư duy (paradigm shift), từ việc thao tác thông tin rời rạc sang kiến trúc hóa dữ liệu có cấu trúc. Khả năng trừu tượng hóa (abstraction) và phân rã bài toán (decomposition) được áp dụng trực tiếp thông qua việc thiết lập cây thư mục logic, chuẩn hóa quy tắc định danh tệp tin phi trùng lặp, tối ưu hóa không gian lưu trữ đám mây và cấu trúc hóa dữ liệu phi cấu trúc phục vụ đắc lực cho các tác vụ truy vấn tự động bằng tập lệnh (scripts) sau này.
+                    </p>
                 </div>
                 
-                <div class="bg-slate-900/80 p-6 rounded-2xl border-l-4 border-fuchsia-400">
-                    <h4 class="text-fuchsia-400 font-bold mb-2 text-xl">2. Năng lực khai thác AI</h4>
-                    <p class="text-slate-300 font-light leading-relaxed">Không chỉ dừng lại ở mức hỏi-đáp cơ bản, kỹ thuật Prompt Engineering giúp tôi biến AI thành một "trợ lý lập trình" và "nghiên cứu viên" thực thụ, tăng tốc độ xử lý tác vụ học tập lên nhiều lần.</p>
+                <div class="bg-slate-900/80 p-6 rounded-2xl border-l-4 border-fuchsia-400 shadow-xl">
+                    <h4 class="text-fuchsia-400 font-bold mb-2 text-xl flex items-center gap-2">
+                        <span>⚙️</span> 2. Làm chủ kiến trúc hạ tầng mạng & Chuỗi liên kết phối hợp trực tuyến
+                    </h4>
+                    <p class="text-slate-300 font-light leading-relaxed text-sm md:text-base">
+                        Việc hiện thực hóa danh mục kỹ thuật số này trực tiếp bằng mã nguồn phân tách (HTML5/Tailwind CSS) và triển khai phân phối ứng dụng qua máy chủ lưu trữ đám mây (GitHub Pages Content Delivery Network) là minh chứng cho năng lực thực nghiệm kỹ thuật. Bản thân đã làm chủ hệ thống kiểm soát phiên bản (Version Control System - Git), chuẩn hóa quy trình phân phối công việc thông qua mô hình quản trị Agile/Kanban trên không gian số, đảm bảo luồng thông tin (data pipeline) hoạt động thông suốt và không xung đột mã nguồn.
+                    </p>
                 </div>
 
-                <div class="bg-slate-900/80 p-6 rounded-2xl border-l-4 border-amber-400">
-                    <h4 class="text-amber-400 font-bold mb-2 text-xl">3. Ứng dụng tương lai</h4>
-                    <p class="text-slate-300 font-light leading-relaxed">Nền tảng về quản trị thông tin học thuật và hợp tác số sẽ là tiền đề cực kỳ vững chắc để tôi bắt nhịp với các đồ án chuyên sâu về Machine Learning và Hệ thống nhúng trong các năm học tới tại UET.</p>
+                <div class="bg-slate-900/80 p-6 rounded-2xl border-l-4 border-amber-400 shadow-xl">
+                    <h4 class="text-amber-400 font-bold mb-2 text-xl flex items-center gap-2">
+                        <span>🛡️</span> 3. Kỹ nghệ Prompt & Kiểm soát rủi ro thuật toán sinh học (LLM Optimization)
+                    </h4>
+                    <p class="text-slate-300 font-light leading-relaxed text-sm md:text-base">
+                        Quá trình tương tác thực nghiệm giúp bản thân nắm vững nguyên lý vận hành của các mô hình ngôn ngữ lớn (LLM), chuyển dịch từ cách đặt câu lệnh Zero-shot cảm tính sang kỹ nghệ thiết kế Prompt chuyên nghiệp (Few-shot Prompting với cấu trúc ngữ cảnh CLEAR). Qua đó định hình khả năng giới hạn không gian vector ngữ nghĩa, kiểm soát và containment triệt để hiện tượng ảo tưởng của AI (AI Hallucination), đồng thời thiết lập bộ giải pháp 3 lớp bảo mật hạ tầng gồm cô lập dữ liệu nhạy cảm, kiểm định chéo logic và minh bạch bản quyền số.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900/80 p-6 rounded-2xl border-l-4 border-rose-400 shadow-xl">
+                    <h4 class="text-rose-400 font-bold mb-2 text-xl flex items-center gap-2">
+                        <span>🚀</span> 4. Định hướng mở rộng Module & Tích hợp đường ống kỹ thuật tương lai
+                    </h4>
+                    <p class="text-slate-300 font-light leading-relaxed text-sm md:text-base">
+                        Toàn bộ các module kiến thức tích lũy từ dự án này không đứng độc lập mà đóng vai trò là hạ tầng nền tảng (modular blocks) sẵn sàng kết nối vào lộ trình phát triển chuyên sâu ngành Kỹ thuật Máy tính tại UET. Tư duy hệ thống chặt chẽ, năng lực tự khai thác thông tin học thuật chuẩn xác và chuỗi công cụ AI bổ trợ sẽ là tiền đề vững chắc để bản thân tiếp cận các học phần nâng cao về thiết kế kiến trúc máy tính, tối ưu hệ thống nhúng thông minh, xây dựng đường ống xử lý dữ liệu lớn (Big Data pipelines) và huấn luyện mô hình Machine Learning thực tế.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
+    <footer class="text-center text-slate-600 py-12 text-[10px] font-mono tracking-widest border-t border-slate-900 uppercase">
+        <p>© 2026 Phan Nhật Quân // Built with HTML5 & Tailwind CSS // Hosted on GitHub Pages</p>
+    </footer>
+
     <script>
         function switchTab(tabId) {
-            // Ẩn tất cả nội dung
             document.querySelectorAll('.content-section').forEach(section => {
                 section.classList.add('hidden');
                 section.classList.remove('animate-[fadeIn_0.5s_ease-out]');
             });
-            // Hiện tab được chọn với hiệu ứng
             const activeSection = document.getElementById(tabId);
             activeSection.classList.remove('hidden');
             void activeSection.offsetWidth; // Reflow
             activeSection.classList.add('animate-[fadeIn_0.5s_ease-out]');
 
-            // Đổi style nút bấm Menu Bottom Dock
             const tabs = ['tab-gioi-thieu', 'tab-du-an', 'tab-tong-ket'];
             tabs.forEach(id => {
                 const btn = document.getElementById('btn-' + id);
@@ -301,8 +318,6 @@
                     btn.classList.add('text-slate-400');
                 }
             });
-            
-            // Tự động cuộn lên mượt mà
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
