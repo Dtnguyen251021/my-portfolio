@@ -25,15 +25,11 @@
             border-radius: 1.5rem;
         }
 
-        /* Tùy chỉnh thanh gập mở (Accordion) */
         details > summary {
             list-style: none;
         }
         details > summary::-webkit-details-marker {
             display: none;
-        }
-        .accordion-content {
-            transition: all 0.3s ease-in-out;
         }
     </style>
 </head>
@@ -41,13 +37,13 @@
 
     <div class="max-w-4xl mx-auto px-4 py-12">
         
-        <a href="index.html" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors mb-8 font-semibold tracking-wide text-sm bg-cyan-500/10 px-4 py-2 rounded-full border border-cyan-500/20 hover:bg-cyan-500/20">
+        <a href="index.html#tab-du-an" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors mb-8 font-semibold tracking-wide text-sm bg-cyan-500/10 px-4 py-2 rounded-full border border-cyan-500/20 hover:bg-cyan-500/20">
             <span>←</span> QUAY LẠI KHO DỰ ÁN
         </a>
 
         <div class="text-center mb-12">
             <h1 class="text-3xl md:text-5xl font-extrabold text-white uppercase tracking-tight mb-4 drop-shadow-lg">
-                Bài 1: Thao tác với <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">tệp tin và thư mục</span>
+                Bài 1: Máy tính và <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">các thiết bị ngoại vi</span>
             </h1>
             <p class="text-slate-400 font-light">Module 01 - Tổ chức dữ liệu & Kiến trúc lưu trữ cá nhân</p>
         </div>
@@ -63,57 +59,17 @@
                 <div class="space-y-5 text-slate-300 text-sm md:text-base font-light leading-relaxed">
                     <div class="flex gap-4">
                         <div class="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 shrink-0"></div>
-                        <p><strong class="text-white font-semibold">Mục tiêu:</strong> Chuẩn hóa quy trình quản trị tài nguyên số trên môi trường Windows/Linux, khắc phục triệt để tình trạng phân mảnh dữ liệu học thuật.</p>
+                        <p><strong class="text-white font-semibold">Mục tiêu:</strong> Thao tác nâng cao với thư mục, phím tắt và thiết lập sao lưu dữ liệu hệ thống đảm bảo an toàn thông tin.</p>
                     </div>
                     <div class="flex gap-4">
                         <div class="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 shrink-0"></div>
-                        <p><strong class="text-white font-semibold">Giải pháp:</strong> Triển khai kiến trúc phân cấp thư mục hình cây (Tree-structure) kết hợp đồng bộ với bộ quy tắc đặt tên (Naming Convention) theo tiêu chuẩn ISO.</p>
+                        <p><strong class="text-white font-semibold">Giải pháp:</strong> Triển khai kiến trúc phân cấp thư mục hình cây kết hợp đồng bộ với bộ quy tắc đặt tên tiêu chuẩn.</p>
                     </div>
                     <div class="flex gap-4">
                         <div class="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 shrink-0"></div>
-                        <p><strong class="text-white font-semibold">Hiệu suất:</strong> Tối ưu hóa lên tới 40% thời gian truy xuất tài liệu; tạo thuận lợi cho việc duyệt file bằng Command Line (Terminal/CMD).</p>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 shrink-0"></div>
-                        <p><strong class="text-white font-semibold">Tác động:</strong> Hạn chế tối đa các lỗi đường dẫn (Path errors) khi thao tác với Script Python và đồng bộ hóa an toàn lên Cloud Storage.</p>
+                        <p><strong class="text-white font-semibold">Tác động:</strong> Tối ưu hóa thời gian truy xuất tài liệu và hạn chế tối đa lỗi đường dẫn khi làm việc.</p>
                     </div>
                 </div>
-            </section>
-
-            <section class="space-y-4">
-                <details class="glass-panel group overflow-hidden cursor-pointer border border-slate-700/50 hover:border-cyan-500/50 transition-colors">
-                    <summary class="p-6 font-bold text-lg text-white flex justify-between items-center outline-none">
-                        <span class="flex items-center gap-3">
-                            <span class="text-cyan-400">▶</span> Phần I: Xây dựng cấu trúc cây thư mục
-                        </span>
-                        <span class="text-slate-500 text-sm font-normal">(Click để xem chi tiết)</span>
-                    </summary>
-                    <div class="p-6 pt-0 border-t border-slate-800 text-slate-300 font-light">
-                        <p class="mb-4">Cấu trúc được chia theo cấp độ: <strong>Năm học > Học kỳ > Môn học > Phân loại (Bài giảng / Bài tập / Tài liệu tham khảo)</strong>. Điều này giúp không gian lưu trữ luôn gọn gàng, có tính bao đóng (encapsulation) cao.</p>
-                        <div class="rounded-xl overflow-hidden border border-slate-700 aspect-video bg-slate-900">
-                            <img src="bai1.png" alt="Cấu trúc thư mục" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                </details>
-
-                <details class="glass-panel group overflow-hidden cursor-pointer border border-slate-700/50 hover:border-cyan-500/50 transition-colors">
-                    <summary class="p-6 font-bold text-lg text-white flex justify-between items-center outline-none">
-                        <span class="flex items-center gap-3">
-                            <span class="text-purple-400">▶</span> Phần II: Quy tắc đặt tên (Naming Convention)
-                        </span>
-                    </summary>
-                    <div class="p-6 pt-0 border-t border-slate-800 text-slate-300 font-light space-y-3">
-                        <p>Quy tắc áp dụng định dạng viết liền không dấu, phân tách bằng dấu gạch dưới (Snake_case) để tối ưu hóa cho máy tính đọc:</p>
-                        <code class="block bg-slate-900 p-3 rounded-lg text-cyan-300 border border-slate-700 font-mono text-sm">
-                            [YYYYMMDD]_[MaMonHoc]_[TieuDeNganGon]_v[Version].[ext]
-                        </code>
-                        <ul class="list-disc pl-5 space-y-1">
-                            <li><strong class="text-white">YYYYMMDD:</strong> Định dạng ngày tháng đảo ngược để file tự động sắp xếp theo trình tự thời gian.</li>
-                            <li><strong class="text-white">MaMonHoc:</strong> Rút gọn (VD: INT1001, NMTTH).</li>
-                            <li>Không sử dụng dấu cách (Space) hoặc ký tự đặc biệt để tránh lỗi khi nạp dữ liệu vào các mô hình Python/C++.</li>
-                        </ul>
-                    </div>
-                </details>
             </section>
 
             <section class="glass-panel p-8 mt-12 border-t-4 border-t-blue-500 relative">
@@ -122,7 +78,7 @@
                 </h3>
                 
                 <div class="w-full aspect-[4/3] rounded-xl overflow-hidden border border-slate-700 bg-slate-900 mb-6 shadow-2xl">
-                    <iframe src="blob:https://www.facebook.com/075e539c-e3c0-4266-b00c-d282e166a840" width="100%" height="100%" class="border-none" allow="autoplay"></iframe>
+                    <iframe src="LINK_GOOGLE_DRIVE_CUA_BAN_THAY_VAO_DAY/preview" width="100%" height="100%" class="border-none" allow="autoplay"></iframe>
                 </div>
 
                 <div class="text-center space-y-6">
